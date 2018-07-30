@@ -16,7 +16,6 @@ public class SkipHook {
      */
     @Before("@skip")
     public void skipScenario(final Scenario scenario) {
-        System.out.println(scenario.getSourceTagNames());
         throw new SkipException(SKIPPED_MSG);
     }
 }
